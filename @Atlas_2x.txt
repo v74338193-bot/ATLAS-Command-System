@@ -1,0 +1,99 @@
+┌────────────┐
+│  Windows   │
+│  Boot /    │
+│  Run .py   │
+└─────┬──────┘
+      │
+      ▼
+┌────────────────────────┐
+│ _  HIRA9L.py           │
+│                        │
+└─────┬──────────────────┘
+      │
+      │ 1) main()
+      ▼
+┌────────────────────────┐
+│ add_to_startup()       │
+│ ─ Creates Startup LNK  │
+└─────┬──────────────────┘
+      │
+      │ 2) send_boot_message()
+      ▼
+┌────────────────────────┐
+│ Telegram Bot API       │
+│ "Atlas Windows Running"│
+└─────┬──────────────────┘
+      │
+      │ 3) Build Bot App
+      ▼
+┌────────────────────────┐
+│ ApplicationBuilder     │
+│ .token(BOT_TOKEN)      │
+│ .build()               │
+└─────┬──────────────────┘
+      │
+      │ 4) Register Commands
+      ▼
+┌────────────────────────┐
+│ add_handler(/start...) │
+│ add_handler(/cpu...)   │
+│ add_handler(/wifi...)  │
+└─────┬──────────────────┘
+      │
+      │ 5) run_polling()
+      ▼
+┌────────────────────────┐
+│ Telegram Long Polling  │
+│ (Waiting for messages) │
+└─────┬──────────────────┘
+      │
+      │ User sends command
+      ▼
+┌────────────────────────┐
+│ Telegram Chat          │
+│ "/screenshot"          │
+└─────┬──────────────────┘
+      │
+      │ 6) Bot receives update
+      ▼
+┌────────────────────────┐
+│ authorized decorator   │
+│ - Check OWNER_CHAT_ID  │
+└─────┬──────────────────┘
+      │ Authorized?
+      ├── No → Reject
+      │
+      └── Yes
+           ▼
+┌────────────────────────┐
+│ Command Handler        │
+│ screenshot_cmd()       │
+└─────┬──────────────────┘
+      │
+      │ 7) Execute OS task
+      ▼
+┌────────────────────────┐
+│ Windows OS             │
+│ ImageGrab.grab()       │
+└─────┬──────────────────┘
+      │
+      │ 8) Result ready
+      ▼
+┌────────────────────────┐
+│ Save temp file         │
+│ screen.png             │
+└─────┬──────────────────┘
+      │
+      │ 9) Send back
+      ▼
+┌────────────────────────┐
+│ Telegram Bot API       │
+│ reply_photo()          │
+└─────┬──────────────────┘
+      │
+      │ 10) User receives
+      ▼
+┌────────────────────────┐
+│ Telegram Chat          │
+│ Screenshot displayed   │
+└────────────────────────┘

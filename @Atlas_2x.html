@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ATLAS Command System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- خطوط Google جديدة -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b0f1a;
+    --card:#151a2e;
+    --accent:#00c6ff;
+    --accent2:#0072ff;
+    --text:#e8e8e8;
+    --muted:#9aa4bf;
+}
+
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Roboto',sans-serif;
+    background:linear-gradient(135deg,#0b0f1a,#1f2233,#0b0f1a);
+    color:var(--text);
+    line-height:1.7;
+    background-size:400% 400%;
+    animation:bgAnimation 15s ease infinite;
+}
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#1a1f3a,#0b0f1a,#1a1f3a);
+    padding:50px 20px;
+    text-align:center;
+    border-radius:0 0 20px 20px;
+    box-shadow:0 4px 20px rgba(0,0,0,.4);
+}
+header h1{
+    font-family:'Orbitron', sans-serif;
+    font-size:3rem;
+    font-weight:700;
+    letter-spacing:2px;
+    background: linear-gradient(90deg,#00c6ff,#0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header p{
+    margin-top:12px;
+    font-size:1.2rem;
+    font-weight:500;
+    color:#9aa4bf;
+}
+
+/* Container */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* Card */
+.card{
+    background:var(--card);
+    border-radius:14px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+/* Titles */
+h2{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+/* Text */
+p,li{
+    color:var(--muted);
+}
+ul{
+    margin-left:20px;
+}
+li{
+    margin-bottom:8px;
+}
+
+/* Links buttons */
+.links a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+    padding:12px 15px;
+    border-radius:10px;
+    margin-bottom:12px;
+    font-weight:600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.links a:hover{
+    transform: scale(1.05) translateX(5px);
+    box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+
+/* Code and flow */
+code{
+    background:#0e1324;
+    padding:4px 8px;
+    border-radius:6px;
+    color:#00eaff;
+}
+.flow{
+    background:#0e1324;
+    border-radius:10px;
+    padding:15px;
+    font-family:monospace;
+    color:#00ffcc;
+}
+
+/* Badge */
+.badge{
+    display:inline-block;
+    background:#00c6ff;
+    color:#000;
+    padding:5px 12px;
+    border-radius:50px;
+    font-size:.8rem;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    color:#777;
+    font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ATLAS Command System</h1>
+    <p>Remote Control & Monitoring Framework via Telegram</p>
+</header>
+
+<div class="container">
+
+    <div class="card links">
+        <span class="badge">Community</span>
+        <a href="https://t.me/the_seeker8">😈 Main Channel — the_seeker8</a>
+        <a href="https://t.me/cm_d09">🚨 Chat Group — cm_d09</a>
+        <a href="https://t.me/DeadlyunitX67">😊 Cooking Videos Channel</a>
+    </div>
+
+    <div class="card">
+        <h2>Project Definition</h2>
+        <p><strong>Project Name:</strong> ATLAS Command System</p>
+        <p><strong>Application:</strong> HIRA9L.py</p>
+    </div>
+
+    <div class="card">
+        <h2>Description</h2>
+        <p>
+            ATLAS is a simple framework for remote control and monitoring of Windows devices via a Telegram Bot.
+            It allows users to monitor system status, collect device information, manage files, capture screenshots,
+            and run programs on the target machine, all in a secure manner with access restricted to a specific
+            authorized Telegram account only.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Objective</h2>
+        <p>
+            The project is designed to simplify the process of monitoring and controlling one or multiple Windows
+            devices through an easy-to-use Telegram interface, while maintaining secure and authorized access.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>System Monitoring:</strong> CPU, RAM, battery status, uptime, running processes.</li>
+            <li><strong>Files & Directories:</strong> Browse, download, create, delete files.</li>
+            <li><strong>Visual Devices:</strong> Screenshots and camera capture.</li>
+            <li><strong>Network Management:</strong> Local & public IP, saved WiFi passwords.</li>
+            <li><strong>Alerts & Notifications:</strong> Telegram messages or Windows pop-ups.</li>
+            <li><strong>Program Execution:</strong> Run & stop Python scripts or executables.</li>
+            <li><strong>Access Protection:</strong> Owner ID authorization.</li>
+            <li><strong>Flexibility:</strong> Multi-device support via one bot.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Usage</h2>
+        <ul>
+            <li>Run <code>HIRA9L.py</code> on a Windows device.</li>
+            <li>Send <code>/start</code> from the authorized Telegram account.</li>
+            <li>Control and monitor the device using Telegram commands.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Execution Flow</h2>
+        <div class="flow">
+            Windows Device<br>
+            └── HIRA9L.py<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└── Telegram Bot<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Authorized User Control
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 ATLAS Project — Designed for Educational & Authorized Use Only
+</footer>
+
+</body>
+</html>
