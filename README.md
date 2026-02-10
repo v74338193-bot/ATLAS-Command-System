@@ -13,3 +13,5 @@ Usage
 Run on a Windows device.HIRA9L.py
 Send from the authorized Telegram account./start
 Control and monitor the device using Telegram commands.
+(Read files)
+https://t.me/the_seeker8
